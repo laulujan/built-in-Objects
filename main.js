@@ -122,8 +122,8 @@ myFunc(arr, 3, 'apple');
 
 /*---------- Date ----------*/
 /*
-Crear una función que al ser llamada haga dos console.log, uno mostrando la fecha actual y otro que muestre cuantos milisegundos
-han pasado desde el 1/enero/1970 hasta ahora.
+Crear una función que al ser llamada haga dos console.log, uno mostrando la fecha actual 
+y otro que muestre cuantos milisegundos han pasado desde el 1/enero/1970 hasta ahora.
 
 myFunc();
 */
