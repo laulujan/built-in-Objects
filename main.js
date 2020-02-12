@@ -190,3 +190,16 @@ Ex: myFunc(number)
 
 
 /*----------------------------------------------------------------------------------- */
+
+
+/*---------- Extra (más no opcional) ----------*/
+/*
+Usar los objetos vistos en clase y aplicarlos para solucionar un escenario que pueda ocurrir 
+entre los proyectos finales que tienen asignados.
+
+Describir el caso:
+
+Mostrar la solucíon en código:
+
+
+*/
