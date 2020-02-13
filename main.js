@@ -10,7 +10,11 @@ myFunc('myString');
 */ 
 
 /*------------------------------ Solución ------------------------------------------- */
-
+function myString(strg){
+    console.log(strg.length);
+  }
+  
+  myString("we are the best");
 
 
 /*----------------------------------------------------------------------------------- */
@@ -32,7 +36,16 @@ b) el número ahora es un entero con valor de (valor) ;)
 */ 
 
 /*------------------------------ Solución ------------------------------------------- */
-
+function entero(num){
+    if (Number.isInteger(num)){
+      console.log(num + "es entero");
+    }else{
+      console.log("el numero ahora es un entero con valor de " + Number.parseInt(num));
+    }
+  }
+  
+  entero(3.4)
+  
 
 
 /*----------------------------------------------------------------------------------- */
@@ -51,7 +64,13 @@ expected result:  4 caracteres.
 */
 
 /*------------------------------ Solución ------------------------------------------- */
+var value = false;
 
+function bool(value){
+    console.log(value.toString().length)
+}
+
+bool(value);
 
 
 /*----------------------------------------------------------------------------------- */
@@ -70,7 +89,17 @@ myFunc(obj);
 */ 
 
 /*------------------------------ Solución ------------------------------------------- */
-
+let usuario = {
+    name: "admin",
+    email: "admin@gmail.com",
+    password: "admin123"
+  }
+  
+  function myFunc(obj){
+    console.log(Object.keys(usuario).length, Object.keys(usuario), Object.values(usuario));
+  }
+  
+  myFunc(usuario);
 
 
 /*----------------------------------------------------------------------------------- */
@@ -90,9 +119,12 @@ result: 3.
 */ 
 
 /*------------------------------ Solución ------------------------------------------- */
+var sum = new Function('a','b','c', 'return a + b + c');
 
-
-
+function myFunc(fn){
+  console.log(fn.length);
+}
+myFunc(sum);
 /*----------------------------------------------------------------------------------- */
 
 
@@ -113,7 +145,21 @@ myFunc(arr, 3, 'apple');
 */ 
 
 /*------------------------------ Solución ------------------------------------------- */
+let frutas = ["apple", "banana"];
 
+function myFunc(array,desiredLength,template){
+  let diferencia = desiredLength - array.length;
+  if(diferencia === 1){
+    array.push(template);
+    console.log(array);
+  }else if(diferencia > 1){
+    console.log(" el arreglo es menor por " + diferencia)
+  }else{
+    console.log("el arreglo es mayor por  " + Math.abs(diferencia));
+  }
+
+}
+myFunc(frutas,1,'apple');
 
 
 /*----------------------------------------------------------------------------------- */
@@ -129,7 +175,12 @@ myFunc();
 */
 
 /*------------------------------ Solución ------------------------------------------- */
-
+function date(){
+    var today = new Date();
+    console.log(today.toISOString());
+    console.log(Date.now());
+}
+date();
 
 
 /*----------------------------------------------------------------------------------- */
@@ -149,7 +200,11 @@ result = 9;
 */
 
 /*------------------------------ Solución ------------------------------------------- */
-
+function myFunc(a, b) {
+    var c = Math.abs(a);
+    console.log(Math.pow(c, b));
+}
+myFunc(-3, 2);
 
 
 /*----------------------------------------------------------------------------------- */
@@ -169,7 +224,16 @@ myFunc(str, template)
 */
 
 /*------------------------------ Solución ------------------------------------------- */
-
+var rg = new RegExp(/([A-Z])/);
+function regex(str, template) {
+    if (rg.test(str)) {
+        newstring = str.replace(rg, template);
+        console.log(newstring);
+        return;
+    }
+    console.log("No encuentro coincidencias");
+}
+regex("nombre", "Ja");
 
 
 /*----------------------------------------------------------------------------------- */
@@ -186,7 +250,14 @@ Ex: myFunc(number)
 */
 
 /*------------------------------ Solución ------------------------------------------- */
-
+function myError(number){
+    if (number <= 10){
+        console.log("valor dentro de los parametros ");
+        return
+    }
+    throw new Error("el valor esta fuera de los parametros");
+}
+myError(8);
 
 
 /*----------------------------------------------------------------------------------- */
@@ -197,9 +268,25 @@ Ex: myFunc(number)
 Usar los objetos vistos en clase y aplicarlos para solucionar un escenario que pueda ocurrir 
 entre los proyectos finales que tienen asignados.
 
-Describir el caso:
+Describir el caso: Consiste en un directorio de especialistas medicos donde puedes realizar una cita.
+Por ejemplo, si el usuario desea recibir el total de las citas que ha agendado.
+crear el objeto usuario, agregar dentro de las propiedades, la propiedad citas que tenga de valor un arreglo,
+al cual cada que se haga una cita, se agregue en el mismo, y se pueda imprimir el total del arreglo.
 
 Mostrar la solucíon en código:
 
 
 */
+let user = {
+  name: "Laura",
+  email: "laura@gmail.com",
+  appointment: ["cita1", "cita2", "cita3"]
+}
+
+function newAppointment (str){
+   
+   console.log("El total de citas es: ",user.appointment.push(str),
+    ", el detalle de citas es: ", user.appointment)
+}
+
+newAppointment("newApp");
