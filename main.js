@@ -44,7 +44,7 @@ function entero(num){
     }
   }
   
-  entero(3.4)
+  entero(3.4);
   
 
 
@@ -64,13 +64,12 @@ expected result:  4 caracteres.
 */
 
 /*------------------------------ Solución ------------------------------------------- */
-var value = false;
 
 function bool(value){
-    console.log(value.toString().length)
+    console.log(value.toString().length);
 }
 
-bool(value);
+bool(true);
 
 
 /*----------------------------------------------------------------------------------- */
@@ -280,7 +279,18 @@ Mostrar la solucíon en código:
 let user = {
   name: "Laura",
   email: "laura@gmail.com",
-  appointment: ["cita1", "cita2", "cita3"]
+  appointment: [
+    {id : "1",
+     name : "cita1"
+    },
+    {id : "2",
+    name : "cita2"
+    },
+    {
+      id : "3",
+     name : "cita3"
+    }
+  ]
 }
 
 function newAppointment (str){
